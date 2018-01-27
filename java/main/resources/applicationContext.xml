@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="employeeRepository" class="com.demo.repository.JpaEmployeeRepository">
+	<property name="name" value="Ritesh K"/>
+	<property name="id" value="10"/>
+	</bean>
+
+	<bean name="employeeService" class="com.demo.service.EmployeeServiceImpl">
+		<property name="employeeRepository" ref="employeeRepository" />
+	</bean>
+</beans>
