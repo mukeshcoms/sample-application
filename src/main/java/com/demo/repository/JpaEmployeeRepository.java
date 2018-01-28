@@ -3,33 +3,20 @@ package com.demo.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.demo.model.Employee;
 
+@Repository("employeeRepository")
 public class JpaEmployeeRepository implements EmployeeRepository {
-    
-	private String name;
-	private int id;
-	public void setName(String name) {
-		this.name = name;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	
-	public JpaEmployeeRepository(String name, int id) {
-		super();
-		this.name = name;
-		this.id = id;
-	}
-	
+
 	public List<Employee> getAllEmployee() { 
 		
 		List<Employee> employees = new ArrayList<Employee>();
 		
 		Employee emp = new Employee();
-		emp.setId(this.id);
-		emp.setName(this.name);
+		emp.setId(300);
+		emp.setName("Ramu Kumar");
 		
 		employees.add(emp);
 		return employees;

@@ -2,12 +2,15 @@ package com.demo.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import com.demo.model.Employee;
 import com.demo.repository.EmployeeRepository;
-import com.demo.repository.JpaEmployeeRepository;
 
+@Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {
    // EmployeeRepository employeeRepository = new JpaEmployeeRepository();
+	@Autowired
 	EmployeeRepository employeeRepository;
 	public void setEmployeeRepository(EmployeeRepository employeeRepository) {
 		this.employeeRepository = employeeRepository;
