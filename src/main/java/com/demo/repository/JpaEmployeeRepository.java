@@ -15,6 +15,14 @@ public class JpaEmployeeRepository implements EmployeeRepository {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	
+	public JpaEmployeeRepository(String name, int id) {
+		super();
+		this.name = name;
+		this.id = id;
+	}
+	
 	public List<Employee> getAllEmployee() { 
 		
 		List<Employee> employees = new ArrayList<Employee>();
