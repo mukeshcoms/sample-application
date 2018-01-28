@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="employRepository" class="com.demo.repository.JpaEmployeeRepository">
+<!-- 		<property name="id" value="1234"></property>
+		<property name="name" value="Ritesh Kumar"></property> -->
+		<constructor-arg value="123" index="1"></constructor-arg>
+		<constructor-arg value="Ritesh Singh" index="0"></constructor-arg>
+	</bean>
+
+	<bean name="employeeService" class="com.demo.service.EmployeeServiceImpl" autowire="byType">
+		<!-- <property name="employeeRepository" ref="employRepository"></property> -->
+	</bean>
+
+</beans>

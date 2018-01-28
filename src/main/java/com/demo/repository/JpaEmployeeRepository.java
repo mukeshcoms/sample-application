@@ -11,10 +11,18 @@ public class JpaEmployeeRepository implements EmployeeRepository {
 	private int id;
 	public void setName(String name) {
 		this.name = name;
-   
+	}
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	
+	public JpaEmployeeRepository(String name, int id) {
+		super();
+		this.name = name;
+		this.id = id;
+	}
+	
 	public List<Employee> getAllEmployee() { 
 		
 		List<Employee> employees = new ArrayList<Employee>();
